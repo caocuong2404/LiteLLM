@@ -1,0 +1,37 @@
+model_list:
+  - model_name: claude-haiku-5
+    litellm_params:
+      model: openrouter/minimax/minimax-m3.1-flash:free
+      api_key: os.environ/OPENROUTER_API_KEY
+    model_info:
+      max_input_tokens: 1000000
+      max_output_tokens: 524288
+
+  - model_name: claude-opus-5
+    litellm_params:
+      model: anthropic/mimo-v2.6-pro
+      api_base: https://token-plan-sgp.xiaomimimo.com/anthropic
+      api_key: os.environ/MIMO_API_KEY
+
+  - model_name: claude-sonnet-5
+    litellm_params:
+      model: anthropic/mimo-v2.5-pro
+      api_base: https://token-plan-sgp.xiaomimimo.com/anthropic
+      api_key: os.environ/MIMO_API_KEY
+
+  - model_name: claude-haiku-5-plus
+    litellm_params:
+      model: anthropic/minimax/minimax-m3.1-flash:free
+      api_base: https://ai-gateway.kilo.ai/api
+      api_key: os.environ/KILO_API_KEY
+    model_info:
+      max_input_tokens: 1000000
+      max_output_tokens: 524288
+
+  - model_name: claude-haiku-5-olm
+    litellm_params:
+      model: anthropic/minimax-m3.1-flash:cloud
+      api_base: https://ollama.com
+      api_key: os.environ/OLLAMA_API_KEY
+      extra_headers:
+        Authorization: os.environ/OLLAMA_AUTH_HEADER

@@ -1,0 +1,10 @@
+.env
+
+# OS noise
+.DS_Store
+
+# Python bytecode
+__pycache__/
+
+# Claude Code app scratch
+.claude/.cc-writes/
